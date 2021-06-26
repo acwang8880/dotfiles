@@ -6,7 +6,8 @@ SetTitleMatchMode,2
 
 ; Google Search highlighted text
 ; Alt
-!sc0046::
+; old !sc0046::
+!#Home::
 {
  Send, ^c
  Sleep 50
@@ -14,7 +15,7 @@ SetTitleMatchMode,2
  Return
 }
 ; Ctrl
-^sc0046::
+^#sc0046::
 {
  Send, ^c
  Sleep 50
@@ -22,7 +23,7 @@ SetTitleMatchMode,2
  Return
 }
 ; Shift
-+sc0046::
++#sc0046::
 {
  Send, ^c
  Sleep 50
@@ -30,7 +31,7 @@ SetTitleMatchMode,2
  Return
 }
 ; Ctrl + Shift
-^+sc0046::
+^+#sc0046::
 {
  Send, ^c
  Sleep 50
@@ -42,7 +43,8 @@ SetTitleMatchMode,2
 F1::WinActivate, Messenger
 ;F2::WinActivate, Visual                                                     ; activate my editor window
 ;Pause::WinActivate, chidv-awl1                                                             ; activate my Delphi window
-Pause::Send ^m
+;Pause::Send ^m
+PrintScreen::Send ^m
 ;F5::Send {F3}
 ; F3 is used heavily by many editors and word processors to as a "do it again" action when searching and replacing.
 ; So, I just change it to F5 so I can use F1 thru F4 to switch among open apps.
